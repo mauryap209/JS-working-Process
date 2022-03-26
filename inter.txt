@@ -1,0 +1,2 @@
+1,Write a program to find LCM of given array elements
+2,Find the highest number  in an array using recursion

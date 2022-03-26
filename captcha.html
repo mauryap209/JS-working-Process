@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #captcha{
+           margin: auto;
+           border: 2px solid teal;
+           text-align: center;
+           width: 50px;
+           
+       } 
+    </style>
+</head>
+<body onLoad="getCaptcha()">
+   <div id="captcha"></div>
+    
+</body>
+<script>
+  function getCaptcha(){
+      const cod=Math.floor(Math.random()*10000);
+      const d= document.getElementById("captcha");
+      d.innerHTML=cod;
+  }
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <select id="state" onChange="getCity()">
+         <option value="0">--Please Select--</option>
+         <option value="up">UP</option>
+         <option value="mp">MP</option>
+     </select>
+     <div id="output"></div>
+</body>
+     <script>
+         function getCity(){
+             const up=["Kanpur","Prayagraj","Lucknow"];
+             const mp=["Jabalpur"," Bhopal"];
+             let result;
+             const state=document.getElementById("state").value;
+             let opt="<select>";
+                if(state=="up"){
+                    result=up;
+                }
+                if(state=="mp"){
+                    result=mp;
+                }
+                if(state=="0"){
+                    return;
+                }
+               for(let city of result){
+                 opt=opt+"<option>"+city+"</option>";
+               }
+                opt=opt+"</select>";
+                document.getElementById("output").innerHTML=opt;
+
+
+         }
+     </script>
+</html>

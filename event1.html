@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       *{
+           margin: 0px;
+           padding: 0px;
+       }
+        div{
+            background-color: teal;
+            height: 210px;
+            width: 200px;
+            position: relative;
+            margin-top: 50px;
+            border-radius: 30px;
+            
+        }
+       .div1{
+        margin-left: 250px;
+         text-align: center;  
+       
+         
+       }
+       input[type="text"]{
+           border: none;
+           font-style:none;
+           font-weight: bold;
+           outline: none;
+           border-radius: 2px;
+       }
+       .btn{
+           background-color: rgb(204, 3, 63);
+           border:none;
+           border:2px solid black ;
+           border-radius: 2px;
+           height: 20px;
+           width: 70px;
+           cursor: pointer;
+           color: white;
+       }
+       .btn:hover{
+           background-color: orange;
+           
+       }
+   </style>
+</head>
+<body>
+    <div class="div1">
+
+        <div class="div2">
+    First Number
+    <input type="text" id="t1"/>
+    <br>
+    Second Number
+    <input type="text" id="t2"/>
+    
+    <br>
+    Total
+     <input type="text" id="t3"/>
+     <br>
+    
+     <br>
+     <input type="button" class="btn" value="Sum +" onClick="sumValue()"/>
+  
+     <input type="button" class="btn" value="Min -" onClick="minValue()"/>
+     <hr>
+     <input type="button" class="btn" value="mlutiply *" onClick="mulValue()"/>
+     <input type="button" class="btn" value="Mod /" onClick="modValue()"/>
+     <hr>
+     <input type="button" class="btn" value="%" onClick="divValue()"/>
+     <input type="button" class="btn" value="Clear" onClick="clearValue()"/>
+
+    </div>
+</body>
+   <script>
+       function sumValue(){
+           t3.value=parseInt(t1.value) + parseInt(t2.value) ;
+       }
+
+       function minValue(){
+           t3.value=parseInt(t1.value) - parseInt(t2.value) ;
+       }
+
+       function mulValue(){
+           t3.value=parseInt(t1.value) * parseInt(t2.value) ;
+       }
+
+
+       function modValue(){
+           t3.value=parseInt(t1.value) / parseInt(t2.value) ;
+       }
+
+       function divValue(){
+           t3.value=parseInt(t1.value) % parseInt(t2.value) ;
+       }
+
+       function clearValue(){
+        //   t1.value=t2.value=t3.value;
+          t1.value="";
+          t2.value="";
+          t3.value="";
+         
+       }
+   </script>
+</html>

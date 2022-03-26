@@ -1,0 +1,62 @@
+<script>
+
+ const student ={
+   sid:101,
+   sname:"Jack"
+  };
+ console.log(student,  typeof(student));
+ console.log(student.sid,student.sname);
+
+/*
+ const id = student.sid;
+ const name = student.sname;
+*/
+ /*const {sid:id,sname:name}=student;
+ console.log(id,name);
+*/
+
+ const {sid,sname}=student;
+ console.log(sid,sname);
+
+
+
+
+
+
+
+
+
+
+
+
+/*  function getAvg(total){
+         if(total>=60){
+            return "Pass";
+         }else{
+              return "Fail";
+            }
+     }
+
+ function getTotalMarks(s1,s2,s3){
+    return new Promise(function(resolve,reject){
+     if(s1<0 || s2<0 || s3<0){
+          reject("Invalid Marks");
+         }
+     setTimeout(function(){
+              const total = parseInt((s1+s2+s3)/3);
+                resolve(total);             
+       },10000);
+   });
+ }
+
+
+ function main(){
+         getTotalMarks(60,80,-60).then(function(success){
+                console.log(getAvg(success))
+           }).catch(function(fail){
+                 console.log(fail);
+            });            
+    }
+main();
+*/
+</script>

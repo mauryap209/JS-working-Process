@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    Simple Amount
+    <input type="text" id="t1" />
+    <br />
+    Rate
+    <input type="text" id="t2" />
+    <br />
+    Time
+    <input type="text" id="t3" />
+    <br />
+    Simple intrest
+    <input type="text" id="t4" />
+    <br />
+    <input type="button" value="Find" onClick="findValue()" />
+    <input type="button" value="Clear" onClick="clsValue()" />
+  </body>
+  <script>
+    function findValue() {
+      t4.value = parseInt(t1.value) * parseInt(t2.value) / parseInt(t3.value);
+    }
+
+    function clsValue(){
+        t1.value="";
+        t2.value="";
+        t3.value="";
+        t4.value="";
+    }
+  </script>
+</html>

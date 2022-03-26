@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post on multicolor background</title>
+    <style>
+      .conteiner{
+        display: inline-block;
+      }
+      #status {
+        height: 50px;
+        width: 100px;
+        border: 2px solid black;
+        scroll-behavior: auto;
+      }
+      .color{
+        height: 220px;
+        width: 300px;
+        border: 2px solid black;
+      }
+      .col-box {
+        display: inline-block;
+        height: 30px;
+        width: 50px;
+        text-align: center;
+        overflow: hidden;
+
+        margin: 10px;
+        cursor: pointer;
+      }
+      #status-box {
+        border-radius: 10px;
+        height: 200px;
+        width: 200px;
+        margin: 30px;
+        color: white;
+        text-align: center;
+        background-color: silver;
+        top: 0px;
+        left: 100px;
+        
+       
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- <input type="text" id="status" /> -->
+    <textarea id="status" cols="10" rows="10"></textarea>
+   
+      <button onClick="uploadStatus()">Post</button>
+   
+    <div class="color">
+      <div style="background: pink" class="col-box" onClick="colorValue()">Pink</div>
+      <div style="background: #00ffff" class="col-box" onClick="colorValue()">Cyan</div>
+      <div style="background: #add8e6" class="col-box" onClick="colorValue()">LightBlue</div>
+      <div style="background: #52595d" class="col-box" onClick="colorValue()">Iron Gray</div>
+      <div style="background: #837e7c" class="col-box" onClick="colorValue()">Granite</div>
+      <div style="background: #728fce" class="col-box" onClick="colorValue()">Light Perple Blue</div>
+      <div style="background: #36454f" class="col-box" onClick="colorValue()">Charcoal Blue</div>
+      <div style="background: #151b8d" class="col-box" onClick="colorValue()">Denim Dark Blue</div>
+      <div style="background: #008b8b" class="col-box" onClick="colorValue()">DarkCyan</div>
+      <div style="background: #2c3539" class="col-box" onClick="colorValue()">Gunmetal</div>
+      <div style="background: #2e8b57" class="col-box" onClick="colorValue()">SeaGreen</div>
+      <div style="background: #848b79" class="col-box" onClick="colorValue()">Sage Green</div>
+      <div style="background: #49413f" class="col-box" onClick="colorValue()">Western Charcoal</div>
+      <div style="background: #872657" class="col-box" onClick="colorValue()">Dark Raspberry</div>
+      <div style="background: #a74ac7" class="col-box" onClick="colorValue()">Purple Flower</div>
+      <div style="background: #4b0150" class="col-box" onClick="colorValue()">Dark Purple</div>
+      
+      
+    </div>
+
+   
+
+    <!-- <div id="status-box"></div> -->
+    <textarea id="status-box" cols="20" rows="10"></textarea>
+  
+
+  </body>
+  <script>
+    let colBox = document.getElementsByClassName("col-box");
+    // let selectedColor = "teal";
+
+    for (let i = 0; i < colBox.length; i++) {
+      colBox[i].addEventListener("click", function () {
+        selectedColor = this.style.background;
+      });
+    }
+    // uploadStatus/////colorValue
+      function uploadStatus() {
+      let status = document.getElementById("status").value;
+      if (status.trim === "") {
+        return;
+      }
+
+      // function colorValue() {
+      // let status = document.getElementById("status").value;
+      // if (status.trim === "") {
+      //   return;
+      // }
+
+      let statusBox = document.getElementById("status-box");
+      statusBox.style.background = selectedColor;
+      // statusBox.style.height = "150px";
+      // statusBox.style.width = "200px";
+      // statusBox.style.margin = "auto";
+      // statusBox.style.color = "white";
+      // statusBox.style.textAlign = "center";
+      // // statusBox.style.lineHeight = "200px";
+      statusBox.innerHTML = status;
+    }
+  
+  </script>
+</html>

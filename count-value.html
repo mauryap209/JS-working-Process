@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+   text
+  <textarea name="" id="t1" cols="20" rows="2"></textarea>
+    <br>
+    find
+    <input type="text" id="t2"/>
+    <br>
+    count
+    <input type="text" id="t3"/>
+    <br>
+
+    <input type="button" value="Find" onClick="findValue()"/>
+</body>
+
+   <script>
+       function findValue(){
+      
+        let st=t1.value;
+        let fnd=t2.value;
+    
+    let word=st.split(" ");
+     
+    for(let w of word){
+      if(w===fnd){
+        count++;
+       
+      }
+    }
+
+       }
+   </script>
+</html>
